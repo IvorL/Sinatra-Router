@@ -22,7 +22,8 @@ end
 
 # Get request that returns an HTML form to edit a game, selected by id. The game is edited on the server
 get "/games/:id/edit" do
-  "Get and edit one particular game"
+  id = params[:id]
+  "Get and edit one particular game #{id}"
 end
 
 # Post request that returns an HTML form. The details from the form are used to create a new game on the server
@@ -32,10 +33,12 @@ end
 
 # Post request to update a particular game that has been selected by id
 put "/games/:id" do
-  "Update a particular game"
+  id = params[:id]
+  "Update a particular game #{id}"
 end
 
 # Request to remove a game from the server
 delete "games/:id" do
-  "Delete a particular game"
+  id = params[:id]
+  "Delete a particular game #{id}"
 end
